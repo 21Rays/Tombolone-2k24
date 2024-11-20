@@ -106,7 +106,7 @@ body {
     animation: swing ease-in-out 1s infinite alternate;
     transform-origin: center -20px;
     float: left;
-    position: relative;  /* Aggiunto per il posizionamento */
+    position: absolute;  /* Aggiunto per il posizionamento */
     top: -40px; /* Modifica il valore per alzarlo */
 }
 
