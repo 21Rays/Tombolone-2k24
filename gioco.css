@@ -10,7 +10,7 @@ body {
 .title {
     font-family: "Pixelify Sans", sans-serif;
     color: black;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     text-decoration: none;
 }
@@ -49,8 +49,8 @@ body {
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    height: 500px;
+    max-width: 1350px;
+    height: 60vb;
     margin: 0 auto;
     overflow: hidden;
 }
