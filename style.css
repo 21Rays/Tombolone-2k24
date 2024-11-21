@@ -10,7 +10,7 @@ body {
 .title {
     font-family: "Pixelify Sans", sans-serif;
     color: black;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     text-decoration: none;
 }
@@ -40,9 +40,9 @@ body {
 
 .carousel-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 1350px;
-    height: 650px;
+    height: 70vb;
     margin: 50px auto;
     overflow: hidden;
     border-radius: 15px;
@@ -61,7 +61,7 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: left   ;
+    justify-content: left;
 }
 
 .slide.active {
@@ -125,7 +125,7 @@ body {
 }
 
 .button-icon {
-    width: 45px; /* Dimensione regolata per adattarsi meglio */
+    width: 2.34vw; /* Dimensione regolata per adattarsi meglio */
     height: auto;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3)); /* Aggiunge un effetto di profondità all'icona */
     transition: transform 0.2s ease; /* Animazione per l'icona */
@@ -155,7 +155,7 @@ body {
 }
 .slide-game-start:hover
 {
-    transform:scale(1.2);
+    transform:scale(1.1);
     background: linear-gradient(to right, red, green); /* Gradiente da rosso a verde */
     -webkit-background-clip: text; /* Supporto per Safari */
     background-clip: text; /* Applicato solo al testo */
