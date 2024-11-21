@@ -8,6 +8,8 @@ body {
 }
 
 .title {
+    position: relative; 
+    z-index: 2; 
     font-family: "Pixelify Sans", sans-serif;
     color: black;
     font-size: 3.75rem;
@@ -22,11 +24,11 @@ body {
 
 .title:hover 
 {
-    background: linear-gradient(to right, rgb(5, 24, 46), rgb(128, 0, 0)); /* Gradient from red to green */
-    -webkit-background-clip: text; /* Clip background for Safari */
-    background-clip: text; /* Apply background gradient to text */
-    color: transparent; /* Make text color transparent to reveal the gradient */
-    text-transform: uppercase; /* Transform text to uppercase */
+    background: linear-gradient(to right, rgb(5, 24, 46), rgb(128, 0, 0)); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    text-transform: uppercase; 
 }
 
 .game-container {
@@ -95,19 +97,20 @@ body {
 
 
 .game-button:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); 
 
     transform: scale(1.1);
     background-color: #218838;
 }
 
 .swing {
+    z-index: 1; 
     height: 200px;
     animation: swing ease-in-out 1s infinite alternate;
     transform-origin: center -20px;
     float: left;
-    position: absolute;  /* Aggiunto per il posizionamento */
-    top: -40px; /* Modifica il valore per alzarlo */
+    position: absolute;  
+    top: -40px; 
 }
 
 .swing img {
@@ -116,7 +119,7 @@ body {
 
 .swing:after {
     content: '';
-    position: absolute; /* Cambiato da relative a absolute */
+    position: absolute; 
     width: 20px;
     height: 20px;
     top: -20px;
@@ -129,7 +132,7 @@ body {
 
 .swing:before {
     content: '';
-    position: absolute; /* Cambiato da relative a absolute */
+    position: absolute; 
     width: 5px;
     height: 5px;
     top: -14px;

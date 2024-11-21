@@ -22,11 +22,11 @@ body {
 
 .title:hover 
 {
-    background: linear-gradient(to right, rgb(5, 24, 46), rgb(128, 0, 0)); /* Gradient from red to green */
-    -webkit-background-clip: text; /* Clip background for Safari */
-    background-clip: text; /* Apply background gradient to text */
-    color: transparent; /* Make text color transparent to reveal the gradient */
-    text-transform: uppercase; /* Transform text to uppercase */
+    background: linear-gradient(to right, rgb(5, 24, 46), rgb(128, 0, 0)); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    text-transform: uppercase; 
 }
 
 .moving-image {
@@ -88,8 +88,8 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 20px;
-    background-color: #1e4319; /* Sfondo bianco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Ombra moderna */
+    background-color: #1e4319; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,24 +99,24 @@ body {
 
 .carousel-button:hover 
 {
-    background-color: #380f0f; /* Cambia colore al passaggio del mouse */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+    background-color: #380f0f; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1)
     
 
 }
 
 .carousel-button:active {
-    background-color: #102941; /* Colore più scuro durante il clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
-    transform: scale(1.2); /* Torna alla dimensione originale */
+    background-color: #102941; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.2); 
 }
 
 .carousel-button.left {
-    left: 50px; /* Posizionamento a sinistra */
+    left: 50px; 
 }
 
 .carousel-button.right {
-    right: 50px; /* Posizionamento a destra */
+    right: 50px; 
 }
 
 .carousel-button.hidden {
@@ -125,21 +125,21 @@ body {
 }
 
 .button-icon {
-    width: 2.34vw; /* Dimensione regolata per adattarsi meglio */
+    width: 2.34vw; 
     height: auto;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3)); /* Aggiunge un effetto di profondità all'icona */
-    transition: transform 0.2s ease; /* Animazione per l'icona */
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3)); 
+    transition: transform 0.2s ease; 
 }
 
 .carousel-button:hover .button-icon {
-    transform: scale(1.2); /* Ingrandimento dell'icona al passaggio del mouse */
+    transform: scale(1.2);
 }
     
 .moving-image {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100px; /* Dimensione fissa per evitare problemi */
+    width: 100px;
     height: auto;
 }
 .slide-game-start
@@ -156,10 +156,10 @@ body {
 .slide-game-start:hover
 {
     transform:scale(1.1);
-    background: linear-gradient(to right, red, green); /* Gradiente da rosso a verde */
-    -webkit-background-clip: text; /* Supporto per Safari */
-    background-clip: text; /* Applicato solo al testo */
-    color: transparent; /* Colore trasparente per vedere il gradiente */
+    background: linear-gradient(to right, red, green); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
     text-align: center;
-    text-transform: uppercase; /* Per dare un tocco festivo */
+    text-transform: uppercase;
 }
