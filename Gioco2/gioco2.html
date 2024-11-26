@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gioco2.css">
+</head>
+<body>
+    <div class="tree">
+        <img src="/assets/hub/palla.png" alt="Palla di Natale" class="swing">
+    </div>
+    <div class="title-position">
+        <a href="/index.html" class="title">PHISHING</a>
+    </div>
+    <div class="game-container">
+        <div class="game-header">
+            <p class="score">Punteggio: <span id="score">0</span></p>
+        </div>
+
+        <div class="carousel-container">
+            <div class="slide active" id="slide-1">
+                <img id="image" src="/assets/gioco/9.jpg" alt="Immagine Gioco" class="game-image">
+                <div class="button-container">
+                    <button class="game-button" onclick="checkAnswer(true)">Vera</button>
+                    <button class="game-button" onclick="checkAnswer(false)">Falsa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zoom-overlay" id="zoomOverlay">
+        <img id="zoomedImage" alt="Zoomed Image">
+    </div>    
+    <script src="gioco.js"></script>
+</body>
+</html>
