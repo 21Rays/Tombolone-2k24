@@ -159,10 +159,7 @@ body {
 .slide-game-start:hover
 {
     transform:scale(1.1);
-    background: linear-gradient(to right, red, green); 
-    -webkit-background-clip: text; 
-    background-clip: text; 
-    color: transparent; 
+    text-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* El efecto de glow */ 
     text-transform: uppercase;
 }
 #snowflakes-container {
