@@ -39,13 +39,14 @@ body {
     max-width: 1350px;
     margin: 50px auto;
     padding: 30px;
-    background-color: white;
+    background-color: rgb(221, 217, 217);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 .score {
+    font-family: "Pixelify Sans", sans-serif;
     padding: 2px;
     background-color:#f3f3f3 ;
     font-size: 1.8rem;
