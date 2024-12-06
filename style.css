@@ -189,3 +189,38 @@ body {
         transform: translateY(100vh) rotate(360deg);
     }
 }
+
+
+.crediti {
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    font-size: 3.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+
+.crediti:hover 
+{
+    text-shadow: 0 0 20px rgba(52, 152, 219, 0.8); 
+}
+
+.crediti-link
+{
+    font-size: 45px;
+    font-family: "Pixelify Sans", sans-serif;
+    color:#000000;
+    text-align: center;
+    transition: transform 0.2s ease; 
+}
+.crediti-link:hover
+{
+    color:#003663;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(52, 152, 219, 0.8); 
+    text-transform: uppercase;
+    transform: scale(1.2); 
+}

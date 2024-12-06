@@ -1,4 +1,4 @@
-let currentSlide = 0;
+let currentSlide = 5;
 const slides = document.querySelectorAll('.slide');
 
 //memorizza i due bottoni
