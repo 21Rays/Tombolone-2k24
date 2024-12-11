@@ -23,10 +23,11 @@ function checkAnswer(isTrue) {
         document.getElementById("score").innerText = score;
     }
     else{
-        console.log("Hai sbagliato coglione");
+        console.log("Hai sbagliato finoetto");
     }
 
-    if(currentIndex === 8){
+    if(currentIndex === (images.length-1)){
+        alert("Hai finito! Ottimo :D");
     }else{
         nextIndex();
     }
