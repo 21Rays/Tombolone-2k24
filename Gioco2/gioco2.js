@@ -1,57 +1,3 @@
-let currentIndex = 8;
-let score = 0;
-const images = [
-    { "src": "assets/gioco/9.jpg", "answer": "true" },
-    { "src": "assets/gioco/10.jpg", "answer": "true" },
-    { "src": "assets/gioco/11.jpg", "answer": "true" },
-    { "src": "assets/gioco/12.jpg", "answer": "true" },
-    { "src": "assets/gioco/13.jpg", "answer": "true" },
-    { "src": "assets/gioco/14.jpg", "answer": "true" },
-    { "src": "assets/gioco/15.jpg", "answer": "true" },
-    { "src": "assets/gioco/16.jpg", "answer": "true" }
-];
-
-function updateImage() {
-    const imageElement = document.getElementById("image");
-    imageElement.src = images[currentIndex].src;
-}
-
-function checkAnswer(isTrue) {
-    const correctAnswer = images[currentIndex].answer === "true";
-    
-    if (isTrue === correctAnswer) {
-        score++;
-        document.getElementById("score").innerText = score;
-    }
-
-    nextSlide();
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
-}
-
-
-
-
-
-// Seleziona gli elementi
-const gameImage = document.getElementById("image");
-const zoomOverlay = document.getElementById("zoomOverlay");
-const zoomedImage = document.getElementById("zoomedImage");
-
-// Aggiungi evento per aprire lo zoom
-gameImage.addEventListener("click", () => {
-    zoomedImage.src = gameImage.src; // Copia il src dell'immagine cliccata
-    zoomOverlay.style.display = "flex"; // Mostra l'overlay
-});
-
-// Aggiungi evento per chiudere lo zoom
-zoomOverlay.addEventListener("click", () => {
-    zoomOverlay.style.display = "none"; // Nascondi l'overlay
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const snowflakesContainer = document.getElementById('snowflakes-container');
     const maxSnowflakes = 100; // Numero massimo di fiocchi di neve
@@ -64,9 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         snowflake.innerHTML = '❄'; // Puoi sostituirlo con immagini o altri simboli
 
         // Imposta posizione e durata iniziale
-        snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
-        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+        snowflake.style.left = Math.random() * 100 + 'vw'; // Posizione orizzontale casuale
+        snowflake.style.top = Math.random() * 100 + 'vh'; // Posizione verticale casuale
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Durata dell'animazione casuale
+        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Dimensione casuale del fiocco
         snowflakesContainer.appendChild(snowflake);
 
         snowflakes.push(snowflake); // Aggiungi all'array
@@ -77,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSnowflake(snowflake) {
         // Riposiziona il fiocco di neve in alto con nuove proprietà casuali
         snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+        snowflake.style.animationDuration = Math.random() * 4 + 3 + 's';
         snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
         snowflake.style.top = '-10px'; // Ripristina la posizione
     }
@@ -99,3 +46,68 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 50); // Controlla ogni 50ms
 });
 
+
+
+function checkStrength() {
+    const password = document.getElementById('password').value;
+    const strengthText = document.getElementById('strength');
+
+    let strength = 0;
+
+    // Criteria for strength evaluation
+    if (password.length >= 8) strength += 1; // Length
+    if (/[A-Z]/.test(password)) strength += 1; // Uppercase letter
+    if (/[a-z]/.test(password)) strength += 1; // Lowercase letter
+    if (/[0-9]/.test(password)) strength += 1; // Number
+    if (/[@$!%*?&]/.test(password)) strength += 1; // Special character
+
+    // Strength feedback
+    switch (strength) {
+        case 0:
+        case 1:
+            strengthText.textContent = "Molto Debole";
+            strengthText.style.color = "red";
+            strengthText.style.fontWeight = "bolder";
+            strengthText.style.fontSize = "25px";
+            strengthText.style.background = "#17171717";
+            strengthText.style.padding = "10px";
+            break;
+
+        case 2:
+            strengthText.textContent = "Debole";
+            strengthText.style.color = "orange";
+            strengthText.style.fontWeight = "bolder";
+            strengthText.style.fontSize = "25px";
+            strengthText.style.background = "#17171717";
+            strengthText.style.padding = "10px";
+            break;
+            break;
+        case 3:
+            strengthText.textContent = "Moderata";
+            strengthText.style.color = "#a39e00";
+            strengthText.style.fontWeight = "bolder";
+            strengthText.style.fontSize = "25px";
+            strengthText.style.background = "#17171717";
+            strengthText.style.padding = "10px";
+            break;
+            break;
+        case 4:
+            strengthText.textContent = "Buona";
+            strengthText.style.color = "#006880";
+            strengthText.style.fontWeight = "bolder";
+            strengthText.style.fontSize = "25px";
+            strengthText.style.background = "#17171717";
+            strengthText.style.padding = "10px";
+            break;
+            break;
+        case 5:
+            strengthText.textContent = "Molto Buona";
+            strengthText.style.color = "#004d09";
+            strengthText.style.fontWeight = "bolder";
+            strengthText.style.fontSize = "25px";
+            strengthText.style.background = "#17171717";
+            strengthText.style.padding = "10px";
+            break;
+            break;
+    }
+}

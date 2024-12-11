@@ -7,6 +7,12 @@ body {
     background: linear-gradient(to top, #001a2b, #003663); /* Gradiente azzurro */
     height: 98vh;
 }
+.link {
+    color:rgb(26, 26, 26);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
 
 .title {
     font-family: "Pixelify Sans", sans-serif;
@@ -68,13 +74,15 @@ body {
 }
 
 .slide-title {
+    font-weight: 700;
     font-size: 2rem;
     margin: 0 0 10px;
     text-align: left;
 }
 
 .slide-text {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 520px;
     text-align: left;
     line-height: 1.5;
 }

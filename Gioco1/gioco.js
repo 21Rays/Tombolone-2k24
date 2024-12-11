@@ -2,14 +2,12 @@ let currentIndex = 0;
 let score = 0;
 const slides = document.querySelectorAll('.slide');
 const images = [
-    { "src": "/assets/gioco/1.jpg", "answer": "true" },
-    { "src": "/assets/gioco/2.jpg", "answer": "true" },
-    { "src": "/assets/gioco/3.jpg", "answer": "true" },
-    { "src": "/assets/gioco/4.jpg", "answer": "true" },
-    { "src": "/assets/gioco/5.jpg", "answer": "true" },
-    { "src": "/assets/gioco/6.jpg", "answer": "true" },
-    { "src": "/assets/gioco/7.jpg", "answer": "true" },
-    { "src": "/assets/gioco/8.jpg", "answer": "true" }
+    { "src": "assets/1.png", "answer": "false"},
+    { "src": "assets/3.png", "answer": "true" },
+    { "src": "assets/2.png", "answer": "false"},
+    { "src": "assets/4.png", "answer": "true" },
+    { "src": "assets/5.png", "answer": "true" },
+    { "src": "assets/6.png", "answer": "false" }
 ];
 
 function updateImage() {
@@ -32,15 +30,13 @@ function checkAnswer(isTrue) {
     }else{
         nextIndex();
     }
+    
 }
 
 function nextIndex() {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
 }
-
-
-
 
 
 // Seleziona gli elementi
@@ -71,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
         snowflake.innerHTML = '❄'; // Puoi sostituirlo con immagini o altri simboli
 
         // Imposta posizione e durata iniziale
-        snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
-        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+        snowflake.style.left = Math.random() * 100 + 'vw'; // Posizione orizzontale casuale
+        snowflake.style.top = Math.random() * 100 + 'vh'; // Posizione verticale casuale
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Durata dell'animazione casuale
+        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Dimensione casuale del fiocco
         snowflakesContainer.appendChild(snowflake);
 
         snowflakes.push(snowflake); // Aggiungi all'array
@@ -84,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSnowflake(snowflake) {
         // Riposiziona il fiocco di neve in alto con nuove proprietà casuali
         snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+        snowflake.style.animationDuration = Math.random() * 4 + 3 + 's';
         snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
         snowflake.style.top = '-10px'; // Ripristina la posizione
     }
@@ -105,4 +102,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 50); // Controlla ogni 50ms
 });
-

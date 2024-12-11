@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="snowflakes-container"></div>
+    <div class="title-position">
+        <a href="index.html" class="title">PHISHING</a>
+    </div>
+    <img src="assets/hub/logo.png" class="moving-image">
+    
+    <div class="carousel-container">
+        <div class="slide active" id="slide-1">
+            <h1 class="slide-title">Cosa è il phishing?</h1>
+            <p class="slide-text">
+                Il phishing è una delle truffe informatiche più diffuse e pericolose. <br>
+                Consiste nel tentativo di ingannare le persone per ottenere informazioni personali, finanziarie o riservate, come password, numeri di carta di credito o credenziali di accesso. <br>
+                I cybercriminali inviano messaggi che sembrano provenire da fonti affidabili, come banche, negozi online o servizi noti. <br>
+                Questi messaggi sono spesso molto convincenti, con design, loghi e linguaggio che imitano perfettamente le comunicazioni ufficiali. <br>
+                L’obiettivo è far credere alla vittima che il messaggio sia autentico e spingerla a fornire le informazioni richieste. <br>
+                Il phishing sfrutta la manipolazione psicologica, giocando su emozioni come paura, urgenza o fiducia, per indurre azioni impulsive.
+            </p>
+        </div>
+        <div class="slide" id="slide-2">
+            <h1 class="slide-title">Come riconoscerlo?</h1>
+            <p class="slide-text">
+                Riconoscere un attacco di phishing è fondamentale per proteggersi. <br>
+                Prestare attenzione a segnali come indirizzi email sospetti, richieste di informazioni personali, link strani o allegati non richiesti. <br>
+                Gli attacchi spesso creano panico con messaggi urgenti, come “Rispondi entro 24 ore per non perdere l’accesso al tuo account!” o offrono premi incredibili per convincere le vittime a cliccare su link o fornire dati. <br>
+                I siti web collegati a questi messaggi possono sembrare autentici, ma presentano piccoli errori nell’indirizzo o nel design. <br>
+                Diffidare anche di email che usano saluti generici o non fanno riferimenti specifici.
+            </p>
+        </div>
+        <div class="slide" id="slide-3">
+            <h1 class="slide-title">Casi reali</h1>
+            <p class="slide-text">
+                Negli ultimi anni, ci sono stati diversi casi di phishing che hanno colpito milioni di persone in tutto il mondo. <br>
+                Un esempio è l’attacco a Gmail nel 2017, in cui un’email finta chiedeva di collaborare su un documento Google, permettendo agli attaccanti di accedere agli account delle vittime. <br>
+                Anche Netflix è stata bersaglio di un attacco nel 2020, con email che chiedevano di aggiornare i dati di pagamento su una pagina falsa. <br>
+                Nel mondo dei videogiochi, Fortnite e Steam sono stati spesso utilizzati per campagne di phishing, promettendo premi o vantaggi in cambio di credenziali, causando la perdita di account e denaro.
+            </p>
+        </div>
+        <div class="slide" id="slide-4">
+            <h1 class="slide-title">Come proteggersi</h1>
+            <p class="slide-text">
+                Per proteggersi dal phishing, è importante adottare buone pratiche di sicurezza. <br>
+                Evitare di cliccare su link o allegati sospetti, soprattutto se non si conosce il mittente. <br>
+                Controllare sempre l’indirizzo email del mittente, facendo attenzione a errori o domini strani. <br>
+                Se un messaggio richiede informazioni personali, è meglio verificare direttamente con l’organizzazione attraverso i suoi canali ufficiali. <br>
+                Diffidare di telefonate o messaggi che chiedono dati sensibili, ricordando che aziende affidabili non lo farebbero mai.
+                Siti utili come <a href="https://haveibeenpwned.com/" target="_blank" class="link">haveibeenpwned.com</a> possono essere utili per vedere se le prorpie informazioni sono state trafugate per via di una distrazione.
+            </p>
+        </div>
+        <div class="slide" id="slide-5">
+            <h1 class="slide-title">Strumenti per evitare attacchi</h1>
+            <p class="slide-text">
+                La tecnologia offre strumenti efficaci per prevenire il phishing. <br>
+                Software antivirus e anti-malware proteggono i dispositivi da minacce, mentre estensioni per browser avvisano su siti sospetti. <br>
+                L’autenticazione a due fattori aggiunge un ulteriore livello di sicurezza ai tuoi account, rendendo difficile per gli hacker accedervi anche con la password. <br>
+                Controllare che i siti web siano protetti con certificati SSL/TLS, identificabili dall’icona del lucchetto, è un’altra precauzione utile.
+            </p>
+        </div>
+        <div class="slide" id="slide-6">
+            <a href="/Gioco1/gioco.html" style="text-decoration:none; color:black"><h1 class="slide-game-start">Giochiamo!!!</h1></a> 
+            <a href="/crediti.html" style="text-decoration:none;"><h1 class="crediti-link">Crediti</h1></a> 
+         </div>
+    </div>    
+    </div>
+    <div class="carousel-button left" onclick="prevSlide()">
+        <img src="assets/arrow-left.png" alt="Previous" class="button-icon">
+    </div>
+    <div class="carousel-button right" onclick="nextSlide()">
+        <img src="assets/arrow-right.png" alt="Next" class="button-icon">
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

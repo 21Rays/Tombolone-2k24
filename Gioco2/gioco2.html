@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gioco2.css">
+    <title>Password Strength Checker</title>
 </head>
 <body>
     <div id="snowflakes-container"></div>
@@ -15,16 +16,14 @@
     </div>
     <div class="game-container">
         <div class="game-header">
-            <p class="score">Punteggio: <span id="score">0</span></p>
+            <h1>Controllo Password </h1>
         </div>
 
         <div class="carousel-container">
             <div class="slide active" id="slide-1">
-                <img id="image" src="/assets/gioco/9.jpg" alt="Immagine Gioco" class="game-image">
-                <div class="button-container">
-                    <button class="game-button" onclick="checkAnswer(true)">Vera</button>
-                    <button class="game-button" onclick="checkAnswer(false)">Falsa</button>
-                </div>
+                <input type="password" id="password" placeholder="Enter your password">
+                <button onclick="checkStrength()">Controlla!</button>
+                <p id="strength"></p>
             </div>
         </div>
     </div>
