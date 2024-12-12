@@ -31,7 +31,6 @@ function checkAnswer(isTrue) {
     }else{
         nextIndex();
     }
-    
 }
 
 function nextIndex() {
@@ -56,6 +55,16 @@ zoomOverlay.addEventListener("click", () => {
     zoomOverlay.style.display = "none"; // Nascondi l'overlay
 });
 
+// Add event listeners for True and False buttons
+document.getElementById("trueButton").addEventListener("click", function() {
+    checkAnswer(true);
+});
+
+document.getElementById("falseButton").addEventListener("click", function() {
+    checkAnswer(false);
+});
+
+// Snowflakes animation code (unchanged)
 document.addEventListener('DOMContentLoaded', function() {
     const snowflakesContainer = document.getElementById('snowflakes-container');
     const maxSnowflakes = 100; // Numero massimo di fiocchi di neve
