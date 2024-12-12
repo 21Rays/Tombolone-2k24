@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxSnowflakes = 100;
     const snowflakes = [];
 
+    // Funzione per creare un fiocco di neve
     function createSnowflake() {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
-        snowflake.innerHTML = '❄'; 
+        snowflake.innerHTML = '❄';
 
         snowflake.style.left = Math.random() * 100 + 'vw';
         snowflake.style.top = Math.random() * 100 + 'vh';
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return snowflake;
     }
 
+    // Funzione per aggiornare un fiocco di neve
     function updateSnowflake(snowflake) {
         snowflake.style.left = Math.random() * 100 + 'vw';
         snowflake.style.animationDuration = Math.random() * 4 + 3 + 's';
@@ -40,11 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     let score = 0;
-    const slides = document.querySelectorAll('.slide');
     const images = [
-        { "src": "assets/1.png", "answer": "false"},
+        { "src": "assets/1.png", "answer": "false" },
         { "src": "assets/3.png", "answer": "true" },
-        { "src": "assets/2.png", "answer": "false"},
+        { "src": "assets/2.png", "answer": "false" },
         { "src": "assets/4.png", "answer": "true" },
         { "src": "assets/5.png", "answer": "true" },
         { "src": "assets/6.png", "answer": "false" }
@@ -57,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function checkAnswer(isTrue) {
         const correctAnswer = images[currentIndex].answer === "true";
-        
+
         if (isTrue === correctAnswer) {
-            if (score < 6) {  // Limita il punteggio massimo a 6
+            if (score < 6) {
                 score++;
                 document.getElementById("score").innerText = score;
             }
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Hai sbagliato!");
         }
 
-        if(currentIndex === (images.length-1)) {
+        if (currentIndex === images.length - 1) {
             alert("Hai finito! Ottimo :D, Il tuo punteggio è: " + score + "/6");
         } else {
             nextIndex();
@@ -85,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const zoomedImage = document.getElementById("zoomedImage");
 
     gameImage.addEventListener("click", () => {
-        zoomedImage.src = gameImage.src; 
+        zoomedImage.src = gameImage.src;
         zoomOverlay.style.display = "flex";
     });
 
     zoomOverlay.addEventListener("click", () => {
-        zoomOverlay.style.display = "none"; 
+        zoomOverlay.style.display = "none";
     });
 
     // Pulsanti True/False
@@ -101,4 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("falseButton").addEventListener("click", function() {
         checkAnswer(false);
     });
+
+    // Assicurati che la prima immagine venga aggiornata all'inizio
+    updateImage(); 
 });
