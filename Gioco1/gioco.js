@@ -27,7 +27,7 @@ function checkAnswer(isTrue) {
     }
 
     if(currentIndex === (images.length-1)){
-        alert("Hai finito! Ottimo :D");
+        alert("Hai finito! Ottimo :D, Il tuo punteggio è: "  + variabile + "/6" );
     }else{
         nextIndex();
     }
