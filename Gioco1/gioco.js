@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isTrue === correctAnswer) {
             if (score < 6) {
                 score++;
-                document.getElementById("score").innerText = score;
             }
         } else {
             console.log("Hai sbagliato!");
